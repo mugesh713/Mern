@@ -1,0 +1,33 @@
+ul {
+    display: flex;
+    padding: 2px;
+    margin: 0;
+    justify-content: space-evenly;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: indigo;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.li {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.li:link {
+    background-color: beige;
+    border-radius: 10px;
+    color: azure;
+    padding: 3px;
+}
+
+li:hover {
+    background-color: beige;
+    border-radius: 10px;
+    color: azure;
+    padding: 3px;
+}

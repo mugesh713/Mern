@@ -1,0 +1,45 @@
+.box-model{
+    font-size: 20px;
+    margin: 50px;
+    border: 10px green;
+    border-style: solid;
+    padding: 40px;
+    scroll-padding: auto;
+}
+
+#idSEg{
+    color: maroon;
+    text-align: center;
+    font-size: xx-large;
+}
+
+ol{
+    text-align: justify;
+}
+
+.box-model1{
+    font-size: 20px;
+    text-align: justify;
+    border: 10px green solid;
+    padding: 40px;
+    margin: 50px;
+}
+
+.alert {
+    margin: 15px 0;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
