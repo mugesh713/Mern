@@ -1,39 +1,29 @@
-import { useState } from "react";
-
-const Gallery = () => {
-    var [counter,setCount]=useState(0);
-    function increment() {
-        setCount(counter+1)
-    }
-    function decrement() {
-        setCount(counter-1)
-    }
-    function reset() {
-        setCount(counter=0)
-    }
-    return (
-        <section>
-            <h1>This is Gallery Page</h1>
-            <h2>Learning State</h2>
-            <h3>The State of my variable count is {counter}</h3>
-            <button onClick={increment}>Increment</button>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
-        </section>
-    );
-};
-
-export default Gallery
-
-/*
 import React, { useState } from 'react';
-import './Gallery.css'; // Ensure you have a corresponding CSS file for styling
+import '../../assets/css/Gallery.css'; // Adjust the path as per your structure
+
+const Counter = () => {
+  const [counter, setCount] = useState(0);
+
+  const increment = () => setCount(counter + 1);
+  const decrement = () => setCount(counter - 1);
+  const reset = () => setCount(0);
+
+  return (
+    <div className="counter-container">
+      <h1>This is the Counter Section</h1>
+      <h2>Learning State</h2>
+      <h3>The current count is: {counter}</h3>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <button onClick={reset}>Reset</button>
+    </div>
+  );
+};
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
   const [newImage, setNewImage] = useState(null);
 
-  // Handle image file selection
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -45,11 +35,10 @@ const Gallery = () => {
     }
   };
 
-  // Handle adding the new image to the gallery
   const addImageToGallery = () => {
     if (newImage) {
       setImages([...images, newImage]);
-      setNewImage(null); // Reset the new image state after adding
+      setNewImage(null); // Reset the state
     }
   };
 
@@ -74,7 +63,11 @@ const Gallery = () => {
       <div className="gallery-grid">
         {images.map((image, index) => (
           <div key={index} className="gallery-item">
-            <img src={image} alt={`Gallery Item ${index}`} className="gallery-image" />
+            <img
+              src={image}
+              alt={`Gallery Item ${index}`}
+              className="gallery-image"
+            />
           </div>
         ))}
       </div>
@@ -82,4 +75,13 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;*/
+const App = () => {
+  return (
+    <div>
+      <Counter />
+      <Gallery />
+    </div>
+  );
+};
+
+export default App;
