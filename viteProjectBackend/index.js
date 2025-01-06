@@ -70,7 +70,7 @@ app.use(express.json()); // To parse JSON data from the request
 app.use(cors()); // To handle CORS issues
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/signup-demo', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://mugesh:1234@users.nscyd.mongodb.net/mydb', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.log('MongoDB connection error:', err));
 
